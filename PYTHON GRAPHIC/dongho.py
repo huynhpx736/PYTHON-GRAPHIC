@@ -51,14 +51,14 @@ def update_clock():
 
     # ve kim phut
     minute_angle = ( minute + second/ 60) * math.pi / 30 - math.pi / 2
-    minute_x = WIDTH // 2 + 0.7 * WIDTH / 2 * math.cos(hour_angle)
-    minute_y = HEIGH / 2 + 0.7 * HEIGH / 2 * math.sin(hour_angle)
+    minute_x = WIDTH // 2 + 0.7 * WIDTH / 2 * math.cos(minute_angle)
+    minute_y = HEIGH / 2 + 0.7 * HEIGH / 2 * math.sin(minute_angle)
     canvas.create_line(WIDTH / 2, HEIGH / 2, minute_x, minute_y, fill="black", width=4)
 
 # ve kim giay
     second_angle = (second / 60) * math.pi / 6 - math.pi / 2
-    second_x = WIDTH // 2 + 0.6 * WIDTH / 2 * math.cos(hour_angle)
-    second_y = HEIGH / 2 + 0.6 * HEIGH / 2 * math.sin(hour_angle)
+    second_x = WIDTH // 2 + 0.6 * WIDTH / 2 * math.cos(second_angle)
+    second_y = HEIGH / 2 + 0.6 * HEIGH / 2 * math.sin(second_angle)
     canvas.create_line(WIDTH / 2, HEIGH / 2, second_x, second_y, fill="red", width=2)
 
 update_clock()
